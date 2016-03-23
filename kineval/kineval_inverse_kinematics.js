@@ -86,7 +86,7 @@ kineval.traverseIKJoint = function traverseIKJoint(joint,deltaX,endeffector_posi
 		Jv[i]=[];
 		Jv[i][0]=Jvdummy[i];
 	}
-	textbar.innerHTML +='<br>'+joint+": Jv: "+Jv[0][0]+' '+Jv[1][0]+' '+Jv[2][0]+’<br>';
+	textbar.innerHTML +='<br>'+joint+": Jv: "+Jv[0][0]+' '+Jv[1][0]+' '+Jv[2][0]+”!!!”+’<br>';
 	var JvT=matrix_transpose(Jv);
 	var alpha=kineval.params.ik_steplength;
 	robot.joints[joint].control=alpha*matrix_multiply(JvT,deltaX);
